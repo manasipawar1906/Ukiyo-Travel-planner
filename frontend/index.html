@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ukiyo Travel Planner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <section class="hero-panel">
+      <p class="eyebrow">AI Travel Design Studio</p>
+      <h1>Ukiyo Travel Planner</h1>
+      <p class="hero-copy">
+        Build a trip that feels intentional, balanced, and worth remembering. Tell Ukiyo where you are going,
+        how long you have, and what you care about, then get a day-by-day plan with food, stops, and pacing.
+      </p>
+      <div class="hero-badges">
+        <span>Curated pacing</span>
+        <span>Local flavor</span>
+        <span>Smart budget fit</span>
+      </div>
+    </section>
+
+    <main class="planner-grid">
+      <section class="card form-card">
+        <div class="card-head">
+          <p class="section-tag">Trip Inputs</p>
+          <h2>Design your next itinerary</h2>
+        </div>
+
+        <div class="input-grid">
+          <label class="field">
+            <span>Destination</span>
+            <input type="text" id="destination" placeholder="Kyoto, Jaipur, Bali...">
+          </label>
+
+          <label class="field">
+            <span>Days</span>
+            <input type="number" id="days" placeholder="3" min="1">
+          </label>
+
+          <label class="field">
+            <span>Budget</span>
+            <input type="text" id="budget" placeholder="15000 INR, mid-range, luxury...">
+          </label>
+
+          <label class="field">
+            <span>Interests</span>
+            <input type="text" id="interests" placeholder="Temples, street food, art, nightlife...">
+          </label>
+        </div>
+
+        <button type="button" id="generate-btn">Generate itinerary</button>
+      </section>
+
+      <section class="card output-card">
+        <div class="card-head">
+          <p class="section-tag">Trip Output</p>
+          <h2>Your journey blueprint</h2>
+        </div>
+        <div id="status" class="status" aria-live="polite"></div>
+        <div id="output" class="output-placeholder">
+          Your itinerary will appear here with a cleaner day-by-day layout once you generate it.
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
